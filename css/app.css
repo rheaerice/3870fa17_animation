@@ -1,7 +1,7 @@
 /*font-family: 'Barlow Condensed', sans-serif;
 font-family: 'Lusitana', serif;*/
 
-
+/*index*/
 .title h1 {
   font-family: 'Lusitana', serif;
   color: black;
@@ -11,6 +11,30 @@ font-family: 'Lusitana', serif;*/
   margin-bottom: 0px;
   border-bottom: 1px solid black;
   width: 200px;
+}
+
+.life{
+  animation: life 12s infinite;
+  animation-delay: 2s;
+}
+@keyframes life {
+  50% {opacity: 0;}
+}
+
+.is {
+  animation: is 12s infinite;
+  animation-delay: 3s;
+}
+@keyframes is {
+  50% {opacity: 0;}
+}
+
+.fine {
+  animation: fine 12s infinite;
+  animation-delay: 5s;
+}
+@keyframes fine {
+  50% {opacity: 0;}
 }
 
 .authorname h2 {
@@ -30,9 +54,11 @@ nav {
   border-bottom: 1px solid black;
   margin: 100px auto;
   border-color: gray;
-
+  transition: all 2s;
 }
-
+.nav:hover {
+  opacity: 0.1;
+}
 .nav a:link, a:visited {
   text-decoration: none;
   display: inline-block;
@@ -45,16 +71,61 @@ p {
   color: black;
   font-size: 20px;
 }
-
+/*first page*/
 .river {
   text-align: center;
+  background-color: black;
+  height: 250px;
+  width: 300px;
+  margin: auto;
+  border-radius: 400px;
+  padding: 10px;
 }
-
+.river p {
+    color: white;
+}
+.river a {
+  text-decoration: none;
+}
+/*elevator page*/
+.box {
+  color: white;
+  height: 50px;
+  width: 30px;
+  margin: 10px;
+  margin-left: 200px;
+  position: relative;
+  bottom: 0px;
+  background-color: black;
+  animation: box 10s infinite;
+  animation-timing-function: linear;
+  -webkit-animation: box 5s infinite;
+}
+@-webkit-keyframes box {
+  0% {opacity: 2.0;bottom: 0px;}
+  50% {opacity: 1.5; bottom: 100px;}
+  75% {opacity: 0.5;bottom: 200px;}
+  100% {opacity: 0;bottom: 400px;}
+}
+@keyframes box {
+  0% {opacity: 2.0;bottom: 0px;}
+  50% {opacity: 1.5; bottom: 100px;}
+  75% {opacity: 0.5;bottom: 200px;}
+  100% {opacity: 0;bottom: 400px;}
+}
 .elevator {
   text-align: right;
   padding-right: 50px;
 }
+.ground {
+  background-color: black;
+  width: 800px;
+  height: 400px;
+  position: absolute;
+  margin-top: -50px;
+}
 
+/*last page*/
 .cry {
   text-align: left;
   padding-left: 30px;
